@@ -118,6 +118,33 @@ namespace Rehber_CRUD.Controllers
         }
 
 
+        [HttpPut(Name = "UpdateContact")]
+        public bool ContactUpdateOrder([FromBody] Contact orderModel)
+        {
+            try
+            {
+                var kind = _kindManager.T_GetByID(orderModel.KindID);
+                var user = _userManager.T_GetByID(orderModel.UserID);
+                var contact = _contactManager.T_GetList().Where(x => x.KindID == orderModel.KindID && x.UserID == orderModel.UserID && x.ContactValue == orderModel.ContactValue);
+
+                if (kind == null || user == null)
+                {
+                    return Sonuc;
+                }
+                else
+                {
+                    _contactManager.T_Update(orderModel);
+                    Sonuc = true;
+                }
+                return Sonuc;
+            }
+            catch (Exception)
+            {
+                return Sonuc;
+            }
+
+        }
+
         [HttpGet(Name = "ListUser")]
         public IActionResult GetUser()
         {
