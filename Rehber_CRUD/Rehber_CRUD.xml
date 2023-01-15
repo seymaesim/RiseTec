@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Rehber_CRUD</name>
+    </assembly>
+    <members>
+        <member name="M:Rehber_CRUD.Controllers.RiseDirectoryController.#ctor(RiseCase.DataAcces.Concrete.Context)">
+            <summary>
+            deneme
+            </summary>
+            <param name="context"></param>
+        </member>
+    </members>
+</doc>
