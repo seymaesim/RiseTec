@@ -22,7 +22,7 @@ namespace RiseCase.DataAcces.Concrete
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=localhost; Database=dbRiseTec; Port=5432; User Id=postgres; Password=sa");
+            optionsBuilder.UseNpgsql("Host=localhost; Database=dbRiseTec; Port=5432; User Id=postgres; Password=*");
         }
 
         public DbSet<User> Users { get; set; } //Kişilerin bilgileri
