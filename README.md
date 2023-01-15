@@ -1,87 +1,102 @@
-# Project Title
+# .NetCore WepAPI Project
 
-One Paragraph of project description goes here
+Rehber uygulamasında 2 ayrı Service ve Unit Test yer almaktadır.
+CRUD işlemlerinin olduğu service ve Rapor işlemlerinin olduğu servis olarak ikiye ayrılmaktadır.
 
-## Getting Started
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to **deploy**(Bold Example) the project on a live system.
+## Projeyi Çalıştırmak
 
-### Prerequisites
+Aşağıda ki bilgiler, geliştirme ve test etme amaçları için yerel makinenizde çalışır durumda olan projenin bir kopyasını almanızı sağlayacaktır.
+Projenin canlı bir sistemde nasıl dağıtılacağına**(Kalın Örnek) ilişkin notlar için dağıtıma bakın.
 
-What things you need to install the software and how to install them
+### Ön Koşullar
 
-```
-Give examples
-```
-
-### Installing
-
-A step by step series of examples that tell you how to get a development env running
-
-Say what the step will be
+linkten uygulamayı indirmeniz gerekmektedir.
 
 ```
-Give the example
+https://github.com/seymaesim/ResiTec.git
 ```
 
-And repeat
+### Yüklenmesi gereken kütüphaneler
+
+Proje c# 2022 .NetCore 7.0 framework kullanıldı.
+
+Katmanların hepsi için güncel kütphaneler aşağıdaki gibidir.
 
 ```
-until finished
-```
-
-End with an example of getting some data out of the system or using it for a little demo
-
-## Running the tests
-
-Explain how to run the automated tests for this system
-
-### Break down into end to end tests
-
-Explain what these tests test and why
+Microsoft.EntityFrameworkCore.Design 7.0.2
+Microsoft.EntityFrameworkCore.Tools 7.0.2
+Microsoft.EntityFrameworkCore 7.0.2
+Npgsql.EntityFrameworkCore.PostgreSQL
+Npgsql
 
 ```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
+Unit Test için yüklenmesi gereken kütphaneler aşağıdaki gibidir.
 
 ```
-Give an example
+FakeItEasy 7.3.1
+FluentAssertions 6.9.0
+Microsoft.NET.Test.Sdk 17.3.2
+NUnit 3.13.3
+xunit 2.4.2
+xunit.runner.visualstudio 2.4.5
+
 ```
 
-## Deployment
 
-Add additional notes about how to deploy this on a live system
+## Gerekli data bilgileri
 
-## Built With
+Sistem API ile CRUD işlemlerini yaparken muhakkak iletişim tipi(Kinds) verileri dolu olmalıdır.
+İletişim tiplerine göre CRUD işlemleriniz gerçekleşecektir.
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+### Örnek Kinds
 
-## Contributing
 
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+```
+Telefon Numarası
+E-Mail
 
-## Versioning
+```
+İletişim tiplerinize göre çoğaltabilirsiniz.
+CRUD işlemlerinizi başarılı bir şekilde yapabilirsiniz.
 
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+### Kodlama
+
+Projede dikkat ettiğim konular,tanımlar ve prensibler
+
+
+```
+SOLID
+N-Tier 
+Unit Of Work Desing Pattern
+Entity Framework
+LinQ
+PostgreSQL
+HTTP Durum Kodları
+HTTP Request
+SqlInjection
+
+```
+
+
+## API Dönüşleri
+
+* [422](https://www.restapitutorial.com/httpstatuscodes.html) - Kişi bilgileri rehberde mevcuttur.
+* [203](https://www.restapitutorial.com/httpstatuscodes.html) - Dependency Management
+* [200](https://www.restapitutorial.com/httpstatuscodes.html) - Başarılı
+* [400](https://www.restapitutorial.com/httpstatuscodes.html) - Başarısız
+
+
+## Gerekli versiyon
+
+.NetCore [7.0](https://dotnet.microsoft.com/en-us/download/dotnet/7.0) için versiyon.
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Şeyma Yılmaz** - *WepAPI ilk çalışma* - [RiseTec](https://github.com/seymaesim/ResiTec.git)
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
-## License
+## Teşekkürler
 
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+* Kodu kullanan herkese
 
-## Acknowledgments
-
-* Hat tip to anyone whose code was used
-* Inspiration
-* etc
